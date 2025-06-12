@@ -1,4 +1,21 @@
 // Scripts
+document.addEventListener("DOMContentLoaded", function () {
+  const downloadBtn = document.getElementById("downloadCV");
+
+  downloadBtn.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default anchor behavior
+
+    const fileUrl = "assets/SHARMILA R - BE-ECE-FRONTEND DEVELOPER-2024(2).pdf"; // Adjust path as needed
+
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = "SHARMILA R - BE-ECE-FRONTEND DEVELOPER-2024.pdf"; // This will be the downloaded file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+});
+
 window.addEventListener('DOMContentLoaded', event => {
      // Navbar shrink function
      var navbarShrink = function () {
